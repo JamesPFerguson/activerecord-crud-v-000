@@ -12,8 +12,7 @@ def can_be_instantiated_and_then_saved
 end
 
 def can_be_created_with_a_hash_of_attributes(attributes)
-  movie = Movie.new
-  attributes.each {|key, value| movie.send("#{key}=", value)}
+  movie = Movie.create(attributes)
 end
 
 def can_be_created_in_a_block
